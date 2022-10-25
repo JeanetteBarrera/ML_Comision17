@@ -1,0 +1,16 @@
+[{
+    "id": 1,
+    "name": "Jona",
+    "last_name": "Cespedes",
+    "email": "mail@mail.com",
+    "password": "$2a$10$UXVElnSkl9E6uDFKXHCVd.nofZL0YU1HMgjg6rTx3sawsBM740IFK",
+    "rol": "ROL_USER",
+    "phone": "15515151",
+    "birthday_date": "",
+    "street": "Calle false 123",
+    "province": "",
+    "city": "",
+    "number": "1852",
+    "zipCode": ""
+}
+]
