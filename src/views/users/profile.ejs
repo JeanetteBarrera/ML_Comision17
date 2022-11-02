@@ -29,12 +29,12 @@
             <div class="box_1">
                 <div>
                     <label for="name">nombre:</label>
-                    <input type="text" name="name" placeholder="name" id="name">
+                    <input type="text" name="name" placeholder="name" id="name" value="<%= user.name %>">
                     <span class="text-danger"></span>
                 </div>
                 <div>
                     <label for="lastname">apellido:</label>
-                    <input type="text" name="lastname" placeholder="lastname" id="lastname">
+                    <input type="text" name="last_name" placeholder="lastname" id="lastname" value="<%= user.last_name %>">
                     <span class="text-danger"></span>
                 </div>
                 <div class="extra_info">
@@ -48,31 +48,31 @@
                 <h2 class="email"><%= user.email %></h2>
             </div>
             <div>
-                <a href="">Cambiar contraseña</a>
+                <a href="/">Cambiar contraseña</a>
             </div>
             <div>
                 <label for="birthday_date">Cumpleaños:</label>
-                <input type="date" name="birthday_date" id="birthday_date">
+                <input type="date" name="birthday_date" id="birthday_date" value="2017-01-01">
                 <span class="text-danger"></span>
             </div>
             <div>
                 <label for="phone">Telefono:</label>
-                <input type="text" name="phone" id="phone">
+                <input type="text" name="phone" id="phone" value="<%= user.phone %>">
                 <span class="text-danger"></span>
             </div>
             <div>
                 <label for="city">Ciudad</label>
-                <input type="text" name="city" placeholder="Ej: Ciuda Autonoma de Buenos Aires" id="city">
+                <input type="text" name="city" placeholder="Ej: Ciuda Autonoma de Buenos Aires" id="city" value="<%= user.city %>">
                 <span class="text-danger"></span>
             </div>
             <div>
                 <label for="province">provincia:</label>
-                <input type="text" name="province" placeholder="province" id="province">
+                <input type="text" name="province" placeholder="province" id="province" value="<%= user.province %>">
                 <span class="text-danger"></span>
             </div>
             <div>
-                <label for="zipCode">codigo postal:</label>
-                <input type="text" name="zipCode" placeholder="zipCode" id="zipCode">
+                <label for="cod_postal">codigo postal:</label>
+                <input type="text" name="cod_postal" placeholder="zipCode" id="cod_postal">
                 <span class="text-danger"></span>
             </div>
 

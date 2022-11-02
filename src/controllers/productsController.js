@@ -44,6 +44,19 @@ const controller = {
 		let subcategories = db.Subcategories.findAll()
 		let marks = db.Marks.findAll()
 
+		/*
+			findOne -> 
+			findByPk -> PK 
+			findAll -> 
+
+			create -> create -> objeto create
+			bulkCreate -> 
+
+			update -> retorna un numero
+			destroy -> 
+		
+		*/
+
 		Promise.all([categories, subcategories, marks])
 			.then(([categories, subcategories, marks]) => {
 
@@ -57,7 +70,7 @@ const controller = {
 
 	// Create -  Method to store
 	store: (req, res) => {
-
+		//return res.send(req.body)
 		/*
 			En caso de que no haya errores:
 				1. verificamos que nos esten llegando los datos y como nos estan llegando los datos
@@ -71,7 +84,6 @@ const controller = {
 				1. En caso de que el usuario haya cargado una imagen, debemos eliminarla del servidor, ya que el producto no se creo.
 				2. Traemos todos los datos necesarios para renderizar el formulario de carga nuevamente
 				3. Pasamos los errores y old
-
 		*/
 		let errors = validationResult(req)
 
@@ -96,9 +108,9 @@ const controller = {
 				subcategory_id: +subcategory,
 				mark_id: +mark
 			})
-				.then(product => {
-					res.redirect('/')
-				}).catch(err => res.send(err))
+			.then(product => {
+				res.redirect('/')
+			}).catch(err => res.send(err))
 
 		} else {
 

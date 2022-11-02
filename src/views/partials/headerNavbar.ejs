@@ -9,7 +9,8 @@
 
 			<div class="col-7 col-md-6">
 				<form action="/search" method="GET" class="search-form">
-					<input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input">
+					<input type="text" name="keywords" placeholder="Buscar productos, marcas y más"
+						class="search-form_input">
 					<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
 				</form>
 			</div>
@@ -36,9 +37,13 @@
 			</ul>
 
 			<ul class="right-navbar">
-				<li><a href="/users/register">Creá tu cuenta <i class="far fa-address-card"></i></a></li>
-				<li><a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-				<li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+				<% if (locals.user) { %>
+					<li><a href="/users/profile">Bienvenido <%= locals.user.name %> </a></li>
+				<% } else { %>
+					<li><a href="/users/register">Creá tu cuenta <i class="far fa-address-card"></i></a></li>
+					<li><a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+				<% } %>
+					<li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
 			</ul>
 		</nav>
 	</div>
