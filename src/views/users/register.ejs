@@ -20,16 +20,12 @@
 					<div class="col-12">
 						<label for="name" class="form-label">Nombre :</label>
 						<input type="text" id="name" name="name" placeholder="Ej: Ursula" class="form-input" value="<%= locals.old && old.name ? old.name : null%>">
-						<% if (locals.errors && errors.name) { %>
-							<small class="error-msg"><%= errors.name.msg %></small>
-						<% } %>
+						<small class="error-msg" id="errorName"><%= locals.errors && errors.name ? errors.name.msg : null %></small>
 					</div>
                     <div class="col-12">
 						<label for="last_name" class="form-label">Apellido :</label>
 						<input type="text" id="last_name" name="last_name" placeholder="Ej: Velasquez" class="form-input" value="<%= locals.old && old.last_name ? old.last_name : null%>">
-						<% if (locals.errors && errors.last_name) { %>
-							<small class="error-msg"><%= errors.last_name.msg %></small>
-						<% } %>
+						<small class="error-msg" id="errorLastName"><%= locals.errors && errors.last_name ? errors.last_name.msg : null %></small>
 					</div>
 					<div class="col-12">
 						<label for="email" class="form-label">Email:</label>
@@ -71,6 +67,7 @@
 	<!-- /product detail -->
 
 	<!-- footer -->
+	<script src="/js/registerValidator.js"></script>
 	<%- include('../partials/footer') %>
 	<!-- /footer -->
 
