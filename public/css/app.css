@@ -25,10 +25,7 @@ body {
   margin: 0;
   font-size: 10px;
 }
-.error-msg {
-  color: red;
-  font-size: 12px;
-}
+
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
@@ -159,6 +156,12 @@ hr {
   margin-bottom: 30px;
 }
 
+.products-wrapper .s3{
+  transition: transform .5s ease;
+}
+.products-wrapper .s3:hover {
+  transform: scale(1.1);
+}
 .products-title {
   font-size: 2.4em;
   font-weight: 400;
@@ -410,6 +413,16 @@ textarea.form-input {
   padding: 15px;
 }
 
+.valid {
+  border: solid 2px green;
+}
+.invalid {
+  border: solid 2px rgb(221, 2, 2);
+}
+.error-msg {
+  color: rgb(221, 2, 2);
+  font-size: 12px;
+}
 
 
 /*====== Media-Queries ======*/

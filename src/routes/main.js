@@ -12,12 +12,6 @@ router.get('/search', mainController.search);
 
 router.get("/prueba", (req, res) => {
     
-    /*
-        findByPk -> recibe un parametro, primary key. segundo parametro condiciones de retorno de la consulta
-        findOne -> retorna un resultado, segundo parametro condiciones de retorno de la consulta
-        >findAll - retorna array de todos los resultados de la consulta,  un parametro condiciones
-
-    */
     db.Subcategories.findAll({
         include: [
             {
