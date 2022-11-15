@@ -114,6 +114,8 @@ const controller = {
 
 		} else {
 
+			console.log("Ocurrieron errores")
+
 			if(req.file) {
 				if ((fs.existsSync("./public/images/products/", req.file.filename)) ){
 					fs.unlinkSync(`./public/images/products/${req.file.filename}`)

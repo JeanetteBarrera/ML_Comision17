@@ -39,7 +39,7 @@ const controller = {
         } else {
 
             
-            console.log(req.body)
+            console.log("Ocurrieron errores")
             return res.render('users/register', {
                 errors: errors.mapped(),
                 old: req.body

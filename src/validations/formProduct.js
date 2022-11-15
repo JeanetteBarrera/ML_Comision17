@@ -11,6 +11,14 @@ module.exports = [
     .notEmpty()
     .withMessage('Debes elegir una categoría'),
 
+    check('subcategory')
+    .notEmpty()
+    .withMessage('Debes elegir una subcategoria'),
+
+    check('mark')
+    .notEmpty()
+    .withMessage('Debes elegir una marca'),
+
     check('price')
     .notEmpty()
     .withMessage('Debes ingresar un precio').bail()
@@ -25,13 +33,26 @@ module.exports = [
         }
         return true
         
-    }).withMessage('Debes ingresar un precio'),
+    }).withMessage('Debes ingresar un precio valido'),
 
     check('discount')
     .isNumeric()
     .withMessage('Sólo números'),
 
+    body('discount')
+    .custom(value => {
+
+        if(value < 0 || value > 70 ){
+            return false
+        }
+        return true
+        
+    }).withMessage('Debes ingresar un descuento valido entre 0 - 70 '),
+
+
     check('description')
-    .isLength({ max: 5000 })
-    .withMessage('El nombre tiene que tener hasta 5000 caracteres')
+    .notEmpty()
+    .withMessage('El campo descripción es obligatorio').bail()
+    .isLength({ min: 10 ,max: 5000 })
+    .withMessage('La descripción tiene que tener como minimo 10 hasta 5000 caracteres')
 ]
